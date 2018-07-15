@@ -19,9 +19,9 @@ defmodule MangoWeb.Acceptance.HomepageTest do
 		product = find_element(:css, ".product")
 		product_name = find_within_element(product, :css, ".product-name") |> visible_text()
 		product_price = find_within_element(product, :css, ".product-price") |> visible_text()
-		assert product_name == "Apple"
-		assert product_price == "100"
-		refute page_source() =~ "Tomato"
+		assert product_name == "Tomato"
+		assert product_price == "50"
+		refute page_source() =~ "Apple"
 	end
 
 end
