@@ -1,14 +1,14 @@
 defmodule PhoenixContextsWeb.OwnerControllerTest do
   use PhoenixContextsWeb.ConnCase
 
-  alias PhoenixContexts.Inpection
+  alias PhoenixContexts.Inspection
 
   @create_attrs %{}
   @update_attrs %{}
   @invalid_attrs %{}
 
   def fixture(:owner) do
-    {:ok, owner} = Inpection.create_owner(@create_attrs)
+    {:ok, owner} = Inspection.create_owner(@create_attrs)
     owner
   end
 

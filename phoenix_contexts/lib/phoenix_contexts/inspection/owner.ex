@@ -1,4 +1,4 @@
-defmodule PhoenixContexts.Inpection.Owner do
+defmodule PhoenixContexts.Inspection.Owner do
   use Ecto.Schema
   import Ecto.Changeset
 
