@@ -48,7 +48,10 @@ Check how to parse structs and receive structs in the functions
 
 Recommendable:
 
-NOT:
+1. 
+
+NOT
+
 ```
 	defmodule Automax.Inpection_context do
 		def get_vehicle()
@@ -57,7 +60,8 @@ NOT:
 	end
 ```
 
-DO:
+DO 
+
 ```
 	defmodule Automax.Inpection_context do
 		def get_vehicle()
@@ -65,3 +69,20 @@ DO:
 	end
 ```
 
+2. 
+
+NOT
+
+```
+	def update_rating( rating_id, new_rating1)...
+```
+
+DO
+
+```
+	def rate_vehicle( vehicle_id, new_rating1)...
+```
+
+#### Event-driven messaging
+
+https://github.com/otobus/event_bus
