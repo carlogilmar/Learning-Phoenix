@@ -10,6 +10,14 @@ defmodule Tools.Parser do
     file
       |> File.read!
       |> CSV.parse_string
+      |> to_products
+  end
+
+  def to_products( products ) when is_list( products ) do
+    for product <- products do
+      [id, name, price] = product
+      %Model.Product{id: id, name: name, price: price}
+    end
   end
 
 end
