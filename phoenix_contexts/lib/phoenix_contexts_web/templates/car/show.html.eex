@@ -1,0 +1,13 @@
+<h2>Show Car</h2>
+
+<ul>
+
+  <li>
+    <strong>Model:</strong>
+    <%= @car.model %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: car_path(@conn, :edit, @car) %></span>
+<span><%= link "Back", to: car_path(@conn, :index) %></span>

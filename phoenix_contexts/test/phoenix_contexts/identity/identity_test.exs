@@ -64,4 +64,64 @@ defmodule PhoenixContexts.IdentityTest do
       assert %Ecto.Changeset{} = Identity.change_user(user)
     end
   end
+
+  describe "cars" do
+    alias PhoenixContexts.Identity.Car
+
+    @valid_attrs %{model: "some model"}
+    @update_attrs %{model: "some updated model"}
+    @invalid_attrs %{model: nil}
+
+    def car_fixture(attrs \\ %{}) do
+      {:ok, car} =
+        attrs
+        |> Enum.into(@valid_attrs)
+        |> Identity.create_car()
+
+      car
+    end
+
+    test "list_cars/0 returns all cars" do
+      car = car_fixture()
+      assert Identity.list_cars() == [car]
+    end
+
+    test "get_car!/1 returns the car with given id" do
+      car = car_fixture()
+      assert Identity.get_car!(car.id) == car
+    end
+
+    test "create_car/1 with valid data creates a car" do
+      assert {:ok, %Car{} = car} = Identity.create_car(@valid_attrs)
+      assert car.model == "some model"
+    end
+
+    test "create_car/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Identity.create_car(@invalid_attrs)
+    end
+
+    test "update_car/2 with valid data updates the car" do
+      car = car_fixture()
+      assert {:ok, car} = Identity.update_car(car, @update_attrs)
+      assert %Car{} = car
+      assert car.model == "some updated model"
+    end
+
+    test "update_car/2 with invalid data returns error changeset" do
+      car = car_fixture()
+      assert {:error, %Ecto.Changeset{}} = Identity.update_car(car, @invalid_attrs)
+      assert car == Identity.get_car!(car.id)
+    end
+
+    test "delete_car/1 deletes the car" do
+      car = car_fixture()
+      assert {:ok, %Car{}} = Identity.delete_car(car)
+      assert_raise Ecto.NoResultsError, fn -> Identity.get_car!(car.id) end
+    end
+
+    test "change_car/1 returns a car changeset" do
+      car = car_fixture()
+      assert %Ecto.Changeset{} = Identity.change_car(car)
+    end
+  end
 end
