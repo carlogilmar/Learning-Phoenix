@@ -1,0 +1,8 @@
+<h2>Show Mechanic</h2>
+
+<ul>
+
+</ul>
+
+<span><%= link "Edit", to: mechanic_path(@conn, :edit, @mechanic) %></span>
+<span><%= link "Back", to: mechanic_path(@conn, :index) %></span>

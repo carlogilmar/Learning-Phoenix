@@ -1,0 +1,5 @@
+<h2>Edit Owner</h2>
+
+<%= render "form.html", Map.put(assigns, :action, owner_path(@conn, :update, @owner)) %>
+
+<span><%= link "Back", to: owner_path(@conn, :index) %></span>

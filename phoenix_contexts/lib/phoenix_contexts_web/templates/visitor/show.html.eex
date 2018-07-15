@@ -1,0 +1,8 @@
+<h2>Show Visitor</h2>
+
+<ul>
+
+</ul>
+
+<span><%= link "Edit", to: visitor_path(@conn, :edit, @visitor) %></span>
+<span><%= link "Back", to: visitor_path(@conn, :index) %></span>
