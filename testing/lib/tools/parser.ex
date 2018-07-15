@@ -14,8 +14,7 @@ defmodule Tools.Parser do
   end
 
   def to_products( products ) when is_list( products ) do
-    for product <- products do
-      [id, name, price] = product
+    for [id, name, price] <- products do
       %Model.Product{id: id, name: name, price: price}
     end
   end
