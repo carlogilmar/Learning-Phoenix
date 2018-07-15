@@ -30,3 +30,38 @@ Contexts:
 - Contexts hide internal implementations
 - Use domain language when naming actions, entities and concepts
 
+
+What ahppens when we need to use a Use in a different context?
+
+- Direct Usage: import the complete context module in the context required
+- Struct Conversion: Useful for read-only
+- Collaborator Schema: Create an internal schema persisted in Ecto that uses a reference to the external schema
+
+We want the context for have this in the controllers:
+
+```
+|> Marketing.visitor_for_user()
+|> Marketing.subscribe_visitor_to_mail()
+```
+
+Check how to parse structs and receive structs in the functions
+
+Recommendable:
+
+NOT:
+```
+	defmodule Automax.Inpection_context do
+		def get_vehicle()
+		def get_vehicle_rating()
+		def get_vehicle_list_price()
+	end
+```
+
+DO:
+```
+	defmodule Automax.Inpection_context do
+		def get_vehicle()
+		# => %Vehicle{ rating: %Rating{}, list_price: %ListPrice{}}
+	end
+```
+
