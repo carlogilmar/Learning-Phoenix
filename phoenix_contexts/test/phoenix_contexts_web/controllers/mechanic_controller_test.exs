@@ -12,6 +12,7 @@ defmodule PhoenixContextsWeb.MechanicControllerTest do
     mechanic
   end
 
+  tag :capture_log
   describe "index" do
     test "lists all mechanics", %{conn: conn} do
       conn = get conn, mechanic_path(conn, :index)
