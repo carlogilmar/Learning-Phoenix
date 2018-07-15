@@ -9,7 +9,7 @@ defmodule MangoWeb.Acceptance.CategoryPageTest do
     # When
     navigate_to("/categories/fruits")
     # Then
-    page_title = find_elements(:css, ".page-title")
+    page_title = find_element(:css, ".page-title")
 							   |> visible_text()
     assert page_title == "Fruits"
     # And
