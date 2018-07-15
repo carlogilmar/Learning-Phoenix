@@ -15,4 +15,9 @@ defmodule Mango.CatalogTest do
     assert product.name == "Tomato"
   end
 
+	test "Get category products" do
+		[product = %Product{}] = Catalog.get_category_products("fruits")
+		assert product.name == "Apple"
+	end
+
 end
