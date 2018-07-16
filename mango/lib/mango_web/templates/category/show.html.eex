@@ -1,4 +1,4 @@
-<h1 class="page-title"><%= @name %></h3>
+<h1 class="page-title"><%= title_case @name %></h3>
 <div>
   <%= for product <- @products do %>
       <div class="product">

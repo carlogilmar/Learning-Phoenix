@@ -11,7 +11,7 @@ defmodule MangoWeb.Acceptance.CategoryPageTest do
     # Then
     page_title = find_element(:css, ".page-title")
 							   |> visible_text()
-    assert page_title == "fruits"
+    assert page_title == "Fruits"
     # And
      product = find_element(:css, ".product")
      product_name = find_within_element(product, :css, ".product-name") |> visible_text()
