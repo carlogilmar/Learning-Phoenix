@@ -29,7 +29,12 @@
 					</div>
 					<div class="collapse navbar-collapse" id="primary-nav">
 						<ul class="nav navbar-nav">
-							<li><a href="">Link</a></li>
+							<li>
+								<%= link "Frutas", to: category_path(@conn, :show, "fruits") %>
+							</li>
+							<li>
+								<%= link "Vegetales", to: category_path(@conn, :show, "vegetables") %>
+							</li>
 						</ul>
 					</div>
 				</div>
