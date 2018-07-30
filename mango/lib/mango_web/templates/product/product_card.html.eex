@@ -1,0 +1,13 @@
+<div class="product thumbnail">
+  <div class="caption">
+    <span class="text-muted pull-right"><%= @product.pack_size %></span>
+    <h2>
+      <div class="product-name"><%= @product.name %></div>
+      <span class="pull-right">
+        <small class="product-price">₹ <%= @product.price %></small>
+      </span>
+    </h2>
+    <hr/>
+  </div>
+  <img src="http://www.greatgrubclub.com/domains/greatgrubclub.com/local/media/images/medium/4_1_1_orange.jpg" width="50%"/>
+</div>
