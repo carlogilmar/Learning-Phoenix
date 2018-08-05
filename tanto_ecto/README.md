@@ -7,7 +7,7 @@
 > mix ecto.gen.repo -r Tanto.Repo
 
 - feature/ecto Set database credentials
-- feature/ecto
+- feature/ecto Add the repository process to the supervisor
 - feature/ecto
 - feature/ecto
 - feature/ecto
