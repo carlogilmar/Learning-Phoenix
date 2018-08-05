@@ -2,4 +2,8 @@
 
 - feature/ecto Create an empty project
 - feature/ecto Add dependencies for postgres and ecto
-- feature/ecto
+- feature/ecto Adding repository
+
+> mix ecto.gen.repo -r Tanto.Repo
+
+
