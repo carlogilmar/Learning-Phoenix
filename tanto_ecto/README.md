@@ -8,7 +8,7 @@
 
 - feature/ecto Set database credentials
 - feature/ecto Add the repository process to the supervisor
-- feature/ecto
+- feature/ecto Add a migration for create a database
 - feature/ecto
 - feature/ecto
 - feature/ecto
