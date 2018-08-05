@@ -7,6 +7,8 @@ defmodule Tanto.Application do
 
   def start(_type, _args) do
     # List all child processes to be supervised
+		import Supervisor.Spec, warn: false
+
     children = [
 			supervisor(Tanto.Repo, [])
     ]
