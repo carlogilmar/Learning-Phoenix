@@ -7,7 +7,7 @@
 - feature/ecto Add the repository process to the supervisor
 - feature/ecto Add a migration for create a database
 - feature/ecto Enable citext as a migration database
-- feature/ecto
+- feature/ecto Add a migration for create a users table
 - feature/ecto
 - feature/ecto
 - feature/ecto
