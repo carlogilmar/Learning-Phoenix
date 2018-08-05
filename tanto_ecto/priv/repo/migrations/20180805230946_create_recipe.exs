@@ -7,7 +7,7 @@ defmodule Tanto.Repo.Migrations.CreateRecipe do
       add :body, :string
       add :lang_code, :string
       add :slug,:string
-      add :servings, :integr
+      add :servings, :integer
       add :status,:string
     end
 		create unique_index(:recipes, [:slug])
