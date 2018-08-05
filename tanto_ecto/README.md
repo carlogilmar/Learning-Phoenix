@@ -6,4 +6,15 @@
 
 > mix ecto.gen.repo -r Tanto.Repo
 
-
+- feature/ecto Set database credentials
+- feature/ecto
+- feature/ecto
+- feature/ecto
+- feature/ecto
+- feature/ecto
+- feature/ecto
+- feature/ecto
+- feature/ecto
+- feature/ecto
+- feature/ecto
+- feature/ecto
