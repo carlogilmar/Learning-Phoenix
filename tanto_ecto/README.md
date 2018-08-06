@@ -1,5 +1,4 @@
-
-Index
+## Index
 
 - [Mix](mix.md)
 - [Repo](repo.md)
