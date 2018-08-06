@@ -17,7 +17,7 @@ defmodule Tanto.Content.Recipe do
   def changeset(%Recipe{} = recipe, attrs) do
     recipe
       |> cast( attrs, [:title])
-      |> validate_required([:title])
+      |> validate_required([:title], message: "Ascooo 🤮 !!")
   end
 
 end
