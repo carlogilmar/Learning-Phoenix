@@ -9,7 +9,7 @@
 - feature/ecto Enable citext as a migration database
 - feature/ecto Add a migration for create a users table
 - feature/ecto Add foreign key reference user-recipe
-- feature/ecto
+- feature/ecto Create an Ecto Schema for represent an business Entity
 - feature/ecto
 - feature/ecto
 - feature/ecto
@@ -55,3 +55,13 @@ Undo last `n` migrations
 > references(:users, on_delete: :delete_all)
 
 > references( table_name, behaviour )
+
+### Ecto Schemas
+
+Macro: **use Ecto.Schema**
+
+```
+schema "table_name" do
+  field :field_name, :field_type
+end
+```
