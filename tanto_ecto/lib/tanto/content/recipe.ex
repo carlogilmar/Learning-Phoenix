@@ -3,6 +3,7 @@ defmodule Tanto.Content.Recipe do
   use Ecto.Schema
   import Ecto.Changeset
   alias Tanto.Content.Recipe
+  alias Tanto.Content.Comment
 
   schema "recipes" do
     field :title, :string
@@ -12,6 +13,7 @@ defmodule Tanto.Content.Recipe do
     field :slug, :string
     field :status, :string
     field :user_id, :integer
+    has_many :comments, Comment
   end
 
   def changeset(%Recipe{} = recipe, attrs) do
