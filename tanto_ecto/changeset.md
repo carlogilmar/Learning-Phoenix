@@ -38,6 +38,31 @@ end
 
 ### Validations
 
+Exclude values
+
 ```
   validate_exclusion(:title, ~w(title fake_title))
+```
+
+Inclusive values
+
+```
+iex(3)> %Recipe{} |> Recipe.changeset(%{title: "hola"})
+#Ecto.Changeset<
+  action: nil,
+  changes: %{title: "hola"},
+  errors: [title: {"is invalid", [validation: :inclusion]}],
+  data: #Tanto.Content.Recipe<>,
+  valid?: false
+>
+```
+
+## This isn't the same
+
+```
+%Recipe{} |> Recipe.changeset(%{title: "hola"})
+```
+
+```
+%Recipe{title: "hola"} |> Recipe.changeset(%{})
 ```
