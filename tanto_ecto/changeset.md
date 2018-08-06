@@ -66,3 +66,9 @@ iex(3)> %Recipe{} |> Recipe.changeset(%{title: "hola"})
 ```
 %Recipe{title: "hola"} |> Recipe.changeset(%{})
 ```
+
+Validate a number
+
+```
+ |> validate_number([:servings])
+```
