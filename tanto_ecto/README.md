@@ -17,5 +17,5 @@
 - feature/ecto Add a migration for create a users table
 - feature/ecto Add foreign key reference user-recipe
 - feature/ecto Create an Ecto Schema for represent an business Entity
-
+- feature/ecto Create an changeset function in recipe schema
 
