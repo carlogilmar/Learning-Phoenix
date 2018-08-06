@@ -6,6 +6,5 @@ defmodule Tanto.Repo.Migrations.AddComment do
       add :body, :string
       add :recipe_id, references(:recipes, on_delete: :delete_all)
     end
-    create unique_index(:comments, [:recipe_id])
   end
 end

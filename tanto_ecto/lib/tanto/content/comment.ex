@@ -10,4 +10,11 @@ defmodule Tanto.Content.Comment do
     belongs_to :recipe, Recipe
   end
 
+  def changeset(%Comment{} = comment, attrs) do
+    comment
+    |> cast( attrs, [:body, :recipe_id])
+    |> validate_required([:body, :recipe_id])
+    |> foreign_key_constraint(:recipe_id)
+  end
+
 end
