@@ -1,10 +1,10 @@
 
 Index
 
-[Mix](mix.md)
-[Repo](repo.md)
-[Queryable](queryable.md)
-[Changeset](changeset.md)
+- [Mix](mix.md)
+- [Repo](repo.md)
+- [Queryable](queryable.md)
+- [Changeset](changeset.md)
 
  ### Learning Ecto
 
