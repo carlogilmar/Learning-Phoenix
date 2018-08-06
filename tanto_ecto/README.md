@@ -49,3 +49,9 @@ Undo last `n` migrations
 > \d recipes
 
 > \d schema_migrations
+
+### DB Macros
+
+> references(:users, on_delete: :delete_all)
+
+> references( table_name, behaviour )
