@@ -19,4 +19,5 @@
 - feature/ecto Create an Ecto Schema for represent an business Entity
 - feature/ecto Create an changeset function in recipe schema
 - feature/ecto Adding validation in changeset for exclude values
+- feature/ecto Adding how to get a change from a changeset
 

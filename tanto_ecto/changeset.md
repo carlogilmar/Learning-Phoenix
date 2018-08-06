@@ -72,3 +72,21 @@ Validate a number
 ```
  |> validate_number([:servings])
 ```
+
+Get change in a changeset
+
+```
+iex(2)> c = Recipe.changeset %Recipe{}, %{title: "fake_title"}
+#Ecto.Changeset<
+  action: nil,
+  changes: %{title: "fake_title"},
+  errors: [],
+  data: #Tanto.Content.Recipe<>,
+  valid?: true
+>
+iex(3)> import Ecto.Changeset
+Ecto.Changeset
+
+iex(4)> changed_title = get_change( c, :title)
+"fake_title"
+```
