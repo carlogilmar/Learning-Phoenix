@@ -8,7 +8,7 @@
 - feature/ecto Add a migration for create a database
 - feature/ecto Enable citext as a migration database
 - feature/ecto Add a migration for create a users table
-- feature/ecto
+- feature/ecto Add foreign key reference user-recipe
 - feature/ecto
 - feature/ecto
 - feature/ecto
@@ -25,6 +25,8 @@ Remember: add as a supervisor child in application.ex
 ### Ecto migrate and rollback
 
 > mix ecto.migrate
+
+> mix ecto.migrations
 
 > mix ecto.rollback
 
