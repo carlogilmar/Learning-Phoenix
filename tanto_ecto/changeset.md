@@ -35,3 +35,9 @@ defmodule Tanto.Content.Recipe do
 
 end
 ```
+
+### Validations
+
+```
+  validate_exclusion(:title, ~w(title fake_title))
+```

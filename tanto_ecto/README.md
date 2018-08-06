@@ -18,4 +18,5 @@
 - feature/ecto Add foreign key reference user-recipe
 - feature/ecto Create an Ecto Schema for represent an business Entity
 - feature/ecto Create an changeset function in recipe schema
+- feature/ecto Adding validation in changeset for exclude values
 
