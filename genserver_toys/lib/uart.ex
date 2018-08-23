@@ -4,12 +4,13 @@ defmodule Uart do
 
   #Client Api
   def start_link() do
-    GenServer.start_link(__MODULE__, [])
+    #    GenServer.start_link(__MODULE__, [])
+    GenServer.start_link(__MODULE__, [], [name: __MODULE__])
   end
 
-  def init_uart( pid ) do
+  def init_uart() do
     IO.puts "Client!"
-    GenServer.call( pid, :init_uart )
+    GenServer.call( __MODULE__, :init_uart )
   end
 
   #Server api
