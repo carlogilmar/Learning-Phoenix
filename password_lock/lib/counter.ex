@@ -7,9 +7,14 @@ defmodule Counter do
     GenServer.start_link(__MODULE__, [])
   end
 
+	def get_data(pid) do
+		GenServer.call( pid, :get_data )
+	end
+
   # Server Api
   def init(_) do
     # runs in the server context 🐨Bob
+		IO.puts "Hello, I'm the gen server "
     {:ok, 1}
   end
 
