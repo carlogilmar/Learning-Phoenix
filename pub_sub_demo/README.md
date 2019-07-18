@@ -1,21 +1,26 @@
 # PubSubDemo
 
-**TODO: Add description**
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `pub_sub_demo` to your list of dependencies in `mix.exs`:
+## Using two nodes
 
 ```elixir
-def deps do
-  [
-    {:pub_sub_demo, "~> 0.1.0"}
-  ]
-end
+$ iex --sname node1@localhost -S mix
+iex(node1@localhost)1> PubSubDemo.ShoppingList.start_link()
+iex(node1@localhost)2> PubSubDemo.ShoppingList.get()
+%{}
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/pub_sub_demo](https://hexdocs.pm/pub_sub_demo).
+```elixir
+# Terminal 2
 
+$ iex --sname node2@localhost -S mix
+iex(node2@locahost)1> Node.connect(:node1@localhost)
+iex(node2@locahost)2> PubSubDemo.Fridge.take("eggplant", 1)
+```
+
+```elixir
+# Terminal 1
+
+Adding eggplant (1) to shopping list
+iex(node1@localhost)3> PubSubDemo.ShoppingList.get()
+%{"eggplant" => 1}
+```
