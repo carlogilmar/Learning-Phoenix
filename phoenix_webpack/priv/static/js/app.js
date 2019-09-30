@@ -105,7 +105,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./css/
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _app = __webpack_require__(/*! ../css/app.css */ \"./css/app.css\");\n\nvar _app2 = _interopRequireDefault(_app);\n\n__webpack_require__(/*! phoenix_html */ \"./node_modules/phoenix_html/priv/static/phoenix_html.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// Import local files\n//\n// Local files can be imported directly using relative\n// paths \"./socket\" or full ones \"web/static/js/socket\".\n\n// import socket from \"./socket\"\n\nconsole.log(\"Que onda aquí andamos!!\");\n\n//# sourceURL=webpack:///./js/app.js?");
+eval("\n\nvar _app = __webpack_require__(/*! ../css/app.css */ \"./css/app.css\");\n\nvar _app2 = _interopRequireDefault(_app);\n\n__webpack_require__(/*! phoenix_html */ \"./node_modules/phoenix_html/priv/static/phoenix_html.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// Import local files\n//\n// Local files can be imported directly using relative\n// paths \"./socket\" or full ones \"web/static/js/socket\".\n\n// import socket from \"./socket\"\n\nconsole.log(\"Que onda aquí andamos!!\");\ndebugger;\n\n//# sourceURL=webpack:///./js/app.js?");
 
 /***/ }),
 

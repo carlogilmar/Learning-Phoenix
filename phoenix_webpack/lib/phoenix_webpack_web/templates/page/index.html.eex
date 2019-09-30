@@ -1,1 +1,11 @@
 <h1> Hola a todos desde WebPack!! </h1>
+
+<div id="app">
+
+  <p> Vue app </p>
+
+  <br>
+
+  <h3> {{message}}  </h3>
+
+</div>
