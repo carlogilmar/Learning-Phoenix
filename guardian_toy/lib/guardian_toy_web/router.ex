@@ -14,7 +14,7 @@ defmodule GuardianToyWeb.Router do
   end
 
   pipeline :browser_pipeline do
-    plug Diagnosis.Guardian.BrowserPipeline
+    plug GuardianToy.Guardian.BrowserPipeline
   end
 
   pipeline :ensure_auth do
@@ -27,6 +27,9 @@ defmodule GuardianToyWeb.Router do
     get "/", PageController, :index
     post "/", PageController, :index
 
+  end
+
+  scope "/admin", GuardianToyWeb do
     pipe_through [:browser, :browser_pipeline, :ensure_auth]
     get "/home", PageController, :home
   end
