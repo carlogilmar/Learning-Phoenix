@@ -13,10 +13,20 @@ defmodule GuardianToyWeb.Router do
     plug :accepts, ["json"]
   end
 
+  pipeline :browser_pipeline do
+    plug Diagnosis.Guardian.BrowserPipeline
+  end
+
+  pipeline :ensure_auth do
+    plug Guardian.Plug.EnsureAuthenticated
+  end
+
   scope "/", GuardianToyWeb do
     pipe_through :browser
 
     get "/", PageController, :index
+    post "/", PageController, :index
+    get "/home", PageController, :home
   end
 
   # Other scopes may use custom stacks.
