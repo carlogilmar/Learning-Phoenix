@@ -26,6 +26,8 @@ defmodule GuardianToyWeb.Router do
 
     get "/", PageController, :index
     post "/", PageController, :index
+
+    pipe_through [:browser, :browser_pipeline, :ensure_auth]
     get "/home", PageController, :home
   end
 
