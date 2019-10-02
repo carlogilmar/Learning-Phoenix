@@ -13,3 +13,7 @@ defmodule GuardianToy.Guardian do
     {:ok,  resource}
   end
 end
+
+# Encript
+# password = Argon2.hash_pwd_salt "carlo"
+# Argon2.verify_pass "carlo", password
