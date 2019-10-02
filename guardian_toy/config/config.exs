@@ -26,9 +26,9 @@ config :logger, :console,
 config :phoenix, :json_library, Jason
 
 # Guardian config
-config :guardian_toy, MyApp.Guardian,
+config :guardian_toy, GuardianToy.Guardian,
 issuer: "guardian_toy",
-secret_key: "x/o2cbC/Qc4vIAwnLFlpb7ykC2evv9Af8mWOL7IbeWHcGIUjnIKlLoqdRTXLoRSs"
+secret_key: "yn2lRO5i3NRlv5Qthz4duFjsTHNz2243qUW/6BCzTJfeaOueOhcpIX55Z+PO+/m9"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

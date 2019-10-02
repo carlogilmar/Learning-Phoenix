@@ -22,16 +22,17 @@ defmodule GuardianToyWeb.Router do
   end
 
   scope "/", GuardianToyWeb do
-    pipe_through :browser
+    pipe_through [:browser, :browser_pipeline]
 
     get "/", PageController, :index
-    post "/", PageController, :index
+    post "/sign_in", PageController, :sign_in
+    get "/logout", PageController, :logout
 
   end
 
   scope "/admin", GuardianToyWeb do
     pipe_through [:browser, :browser_pipeline, :ensure_auth]
-    get "/home", PageController, :home
+    get "/", PageController, :home
   end
 
   # Other scopes may use custom stacks.

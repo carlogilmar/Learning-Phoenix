@@ -16,8 +16,17 @@ defmodule GuardianToyWeb.PageController do
   def sign_in(conn, params) do
     #user = Accounts.sign_in_user_in_browser( params["username"], params["password"])
     #login_reply( user, conn )
+    IO.puts "******** user o {:error, :wrong_credencials}"
     IO.inspect params
-    conn |> redirect(to: "/")
+    IO.puts "********"
+    user = %{id: 1, username: "carlogilmar", password: "1234567890"}
+    login_reply( {:ok, user}, conn )
+    #conn |> redirect(to: "/")
+  end
+  def logout(conn, _) do
+    conn
+    |> GuardianToy.Guardian.Plug.sign_out()
+    |> redirect(to: "/")
   end
 
   #def logout(conn, _) do
@@ -30,8 +39,10 @@ defmodule GuardianToyWeb.PageController do
   #  conn |> redirect(to: "/")
   #end
 
-  #defp login_reply({:ok, user}, conn) do
-  #  Diagnosis.Guardian.Plug.sign_in(conn, user) |> redirect(to: "/login")
-  #end
+  defp login_reply({:ok, user}, conn) do
+    user = GuardianToy.Guardian.encode_and_sign(user)
+    IO.inspect user
+    GuardianToy.Guardian.Plug.sign_in(conn, user) |> redirect(to: "/admin")
+  end
 
 end
