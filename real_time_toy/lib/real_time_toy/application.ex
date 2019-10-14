@@ -9,7 +9,8 @@ defmodule RealTimeToy.Application do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      RealTimeToyWeb.Endpoint
+      RealTimeToyWeb.Endpoint,
+      RealTimeToyWeb.Presence
       # Starts a worker by calling: RealTimeToy.Worker.start_link(arg)
       # {RealTimeToy.Worker, arg},
     ]
