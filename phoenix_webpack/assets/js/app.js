@@ -10,3 +10,4 @@ import "phoenix_html"
 // import socket from "./socket"
 
 console.log("Que onda aquí andamos!!");
+debugger;

@@ -1,0 +1,28 @@
+<h2>Login Page</h2>
+
+<%= if @maybe_user == nil do %>
+
+  <h2> Sin usuario, mostrar login acá </h2>
+
+  <h2>Login Page</h2>
+  <%= form_for @conn, Routes.page_path(@conn, :sign_in), [method: :post, class: "pull-right"], fn f -> %>
+    <input type="hidden" name="_csrf_token" id="_csrf_token" value="<%= Plug.CSRFProtection.get_csrf_token() %>" />
+
+    <br>
+    <input type="text" name="username" />
+    <br>
+    <input type="password" name="password" />
+
+    <div class="row">
+      <div class="col-lg-2">
+        <button style="margin-top:25px;" type="submit" value="Submit" class=" btn btn-sm btn-success btn-block" id="auditar">
+          <i class="fa fa-plus"></i> Agregar
+        </button>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+
+  <h2> Hay usuario!! </h2>
+
+<% end %>
